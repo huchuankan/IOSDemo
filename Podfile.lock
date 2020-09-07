@@ -1,0 +1,67 @@
+PODS:
+  - AvoidCrash (2.3.0-beta)
+  - FLAnimatedImage (1.0.12)
+  - GoogleMaps (3.8.2):
+    - GoogleMaps/Maps (= 3.8.2)
+  - GoogleMaps/Base (3.8.2)
+  - GoogleMaps/Maps (3.8.2):
+    - GoogleMaps/Base
+  - GooglePlaces (3.8.2):
+    - GoogleMaps/Base (= 3.8.2)
+  - GTSDK (2.4.5.0)
+  - IQKeyboardManager (6.5.6)
+  - JSONModel (1.7.0)
+  - Masonry (1.1.0)
+  - MJRefresh (3.4.3)
+  - pop (1.0.12)
+  - SDWebImage (5.8.4):
+    - SDWebImage/Core (= 5.8.4)
+  - SDWebImage/Core (5.8.4)
+  - TYAlertController (1.2.0)
+
+DEPENDENCIES:
+  - AvoidCrash (~> 2.3.0-beta)
+  - FLAnimatedImage (~> 1.0.12)
+  - GoogleMaps (~> 3.8.0)
+  - GooglePlaces (~> 3.8.0)
+  - GTSDK
+  - IQKeyboardManager (~> 6.5.5)
+  - JSONModel (~> 1.7.0)
+  - Masonry
+  - MJRefresh (~> 3.4.3)
+  - pop (~> 1.0.8)
+  - SDWebImage (~> 5.8.0)
+  - TYAlertController
+
+SPEC REPOS:
+  trunk:
+    - AvoidCrash
+    - FLAnimatedImage
+    - GoogleMaps
+    - GooglePlaces
+    - GTSDK
+    - IQKeyboardManager
+    - JSONModel
+    - Masonry
+    - MJRefresh
+    - pop
+    - SDWebImage
+    - TYAlertController
+
+SPEC CHECKSUMS:
+  AvoidCrash: 8f0cbad0ba03fa2c9b439cc9647e5ca54b3680a7
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
+  GoogleMaps: ae0efe10e9c40bcd9decd0c9fd53d947af7801a3
+  GooglePlaces: 8baf0c60e318431ca3c1b022f2745a23b104caca
+  GTSDK: 57aade75041f96eb1e36a8553a3eba1d1ece424f
+  IQKeyboardManager: 2a6e97afdafc7becf0cb17a9a8d795e3a980717f
+  JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MJRefresh: 53e3e3219f204425ee6d3e62e8733d3295944cd6
+  pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
+  SDWebImage: cf6922231e95550934da2ada0f20f2becf2ceba9
+  TYAlertController: c121090edb0bea7426f987da94cdddd81eef4231
+
+PODFILE CHECKSUM: 1fc6f3c3175cb60b8c1ffa8db2f05b4aa5c2310d
+
+COCOAPODS: 1.9.3

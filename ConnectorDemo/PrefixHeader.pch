@@ -1,0 +1,59 @@
+//
+//  PrefixHeader.pch
+//  Connect
+//
+//  Created by moorgen on 2017/11/25.
+//  Copyright © 2017年 MoorgenSmartHome. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+//#import "CFont.h"
+//#import "CString.h"
+//#import "CSize.h"
+#import "CColor.h"
+#import "Masonry.h"
+#import "MJRefresh.h"
+#import "Constant.h"
+//#import "HUDUtil.h"
+//#import "UIView+TYAlertView.h"
+//#import "Util.h"
+//#import "CustomShadow.h"
+//#import "CoulisseUtil.h"
+//#import "UIView+Shadow.h"
+//#import "UIButton+Connector.h"
+//#import "UILabel+Connector.h"
+//#import "UIImageView+Connector.h"
+//#import "UIImage+Connector.h"
+//#import "BridgeHelper.h"
+//#import "UIImageView+WebCache.h"
+//#import "MGRefreshNormalHeader.h"
+//#import <Bridge/BridgeManager.h>
+//#import <Bridge/BridgeConstants.h>
+//#import "Bridge/HomeInfo.h"
+
+//#import "Bridge/UserInfo.h"
+//#import "Bridge/ZoneInfo.h"
+//#import "Bridge/RoomInfo.h"
+//#import "Bridge/DeviceInfo.h"
+//#import "Bridge/DeviceInfo+DataRead.h"
+//#import "Bridge/DevModelInfo.h"
+//#import "Bridge/DevModelAttr.h"
+//#import "Bridge/HubInfo.h"
+//#import "Bridge/SceneInfo.h"
+//#import "Bridge/TimerInfo.h"
+//#import "Bridge/ActionInfo.h"
+
+#import "AppDelegate.h"
+//#import "RoomInfo+Unassigned.h"
+//#import "HomeInfo+Unassigned.h"
+//#import "DeviceInfo+Helper.h"
+//#import "SVProgressHUD.h"
+
+
+#endif /* PrefixHeader_pch */
+
+

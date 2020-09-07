@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Intent View Controller-->
+        <scene sceneID="7MM-of-jgj">
+            <objects>
+                <viewController id="ObA-dk-sSI" customClass="IntentViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zMn-AG-sqS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="356"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbQ-Gi-eky">
+                                <rect key="frame" x="10" y="156" width="300" height="30"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="5ll-gs-G8k"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aVi-L3-Pyr">
+                                <rect key="frame" x="70" y="194" width="180" height="40"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="QLs-UB-oXm"/>
+                                    <constraint firstAttribute="height" constant="40" id="d4h-uY-bgM"/>
+                                </constraints>
+                                <state key="normal" title="这里按钮无效">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnclick:" destination="ObA-dk-sSI" eventType="touchUpInside" id="VKF-i7-a2n"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SiriView.gif" translatesAutoresizingMaskIntoConstraints="NO" id="2vp-hj-0JB">
+                                <rect key="frame" x="10" y="44" width="300" height="112"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="112" id="ZzO-vH-ThL"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="4PN-XC-lEE" firstAttribute="top" secondItem="2vp-hj-0JB" secondAttribute="top" id="16p-Iq-KHr"/>
+                            <constraint firstItem="aVi-L3-Pyr" firstAttribute="centerX" secondItem="4PN-XC-lEE" secondAttribute="centerX" id="BVZ-45-qwv"/>
+                            <constraint firstItem="2vp-hj-0JB" firstAttribute="leading" secondItem="4PN-XC-lEE" secondAttribute="leading" constant="10" id="Et3-4l-lRD"/>
+                            <constraint firstItem="4PN-XC-lEE" firstAttribute="trailing" secondItem="2vp-hj-0JB" secondAttribute="trailing" constant="10" id="VmL-P0-p6Q"/>
+                            <constraint firstItem="aVi-L3-Pyr" firstAttribute="top" secondItem="zbQ-Gi-eky" secondAttribute="bottom" constant="8" id="VnB-gB-39g"/>
+                            <constraint firstItem="zbQ-Gi-eky" firstAttribute="top" secondItem="2vp-hj-0JB" secondAttribute="bottom" id="c9s-V5-dHl"/>
+                            <constraint firstItem="zbQ-Gi-eky" firstAttribute="leading" secondItem="4PN-XC-lEE" secondAttribute="leading" constant="10" id="j9v-cR-v1P"/>
+                            <constraint firstItem="4PN-XC-lEE" firstAttribute="trailing" secondItem="zbQ-Gi-eky" secondAttribute="trailing" constant="10" id="uBu-Rb-Xa8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4PN-XC-lEE"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="356"/>
+                    <connections>
+                        <outlet property="btn" destination="aVi-L3-Pyr" id="mGb-uu-jaH"/>
+                        <outlet property="siriTitle" destination="zbQ-Gi-eky" id="HaR-JO-Uqc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X47-rx-isc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="89.732142857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="SiriView.gif" width="359" height="112"/>
+    </resources>
+</document>
