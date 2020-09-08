@@ -10,12 +10,6 @@
 #import <Intents/Intents.h>
 #import "ConnectorDemoIntent.h"
 
-
-@interface Person : NSObject
-
-
-@end
-
 @interface AppDelegate ()
 
 @end
@@ -30,21 +24,24 @@
     
     NSString *test = NSLocalizedString(@"test1", "just a testing");
     NSLog(@"%@",test);
-    [self  addMenuItemShortcuts];
     
     return YES;
 }
 
-- (void)addMenuItemShortcuts
-{
-    if (@available(iOS 12.0, *)) {
-        ConnectorDemoIntent *intent = [[ConnectorDemoIntent alloc] init];
-        intent.title = @"1";
-        intent.name = @"2";
-        intent.suggestedInvocationPhrase = NSLocalizedString(@"SIRI_SHORTCUT_CORRECT_WORK", nil);
-        [[INVoiceShortcutCenter sharedCenter] setShortcutSuggestions:@[[[INShortcut alloc] initWithIntent:intent]]];
-    }
-}
 
+
+// 其他方式唤起app 包括但不限于 通过siri点击后唤起app
+- (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void(^)(NSArray<id<UIUserActivityRestoring>> * __nullable restorableObjects))restorationHandler {
+
+    if ([userActivity.activityType containsString:@"ConnectorDemoIntent"]){
+        //处理通过 Siri intents 打开的app入口
+
+        
+    } else  if ([userActivity.activityType containsString:@"ConnectorDemoActivity"]){
+        //处理通过 Siri NsUserActivity 打开的app入口
+        
+       }
+    return YES;
+}
 
 @end

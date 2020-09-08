@@ -11,8 +11,8 @@
 @implementation SiriDemoHandler
 
 
-//猜想：根据intent选择的catagray：do order 等，展示不同的ui外形(是否带操作，如果没操作就直接进方法，如果有操作，就等操作后进方法)
-//下面这个方法是用户对 Intent UI 的操作回调，比如用户点击了图一的“是”这个按,然后按照rsp类型或打开，或重刷siri界面
+//猜想：根据intent设置的时候是否勾选 user confirmation required， 展示不同的ui外形(是否带操作按钮，如果没操作就直接进方法，如果有操作，就等操作后进方法)
+//下面这个方法是用户对 Intent UI 的操作回调，比如用户点击了图一的“执行”这个按,然后按照rsp类型或打开，或重刷siri界面
 - (void)handleConnectorDemo:(ConnectorDemoIntent *)intent completion:(void (^)(ConnectorDemoIntentResponse *response))completion NS_SWIFT_NAME(handle(intent:completion:)) {
    
     //   这个方法能返回以下状态的尝试，点击按钮后
@@ -27,7 +27,7 @@
     //   ConnectorDemoIntentResponseCodeFail    //仅仅刷新界面
     
     //以上只有success 和自定义code会停留代码，且interaction.intentHandlingStatus===ConnectorDemoIntentResponseCodeInProgress
-    //                        rsp.code才==传过去的对应code
+    //             rsp.code才==传过去的对应code
     
     //建议：如果只是界面停留， 在处理这里的逻辑后，根据不同处理结果，指定不同的【自定义“code】，然后在siri界面根据自定义code刷新不同的界面效果
     
@@ -37,7 +37,7 @@
     if (@available(iOS 12.0, *)) {
         if (isLogin) {
             //做一下逻辑后按结果返回不通的数据
-            ConnectorDemoIntentResponse *rsp = [[ConnectorDemoIntentResponse alloc] initWithCode:ConnectorDemoIntentResponseCodeSuccess userActivity:nil];
+            ConnectorDemoIntentResponse *rsp = [[ConnectorDemoIntentResponse alloc] initWithCode:ConnectorDemoIntentResponseCodeDone userActivity:nil];
             rsp.name = @"小船来了2222";
             rsp.title = @"终于登录成功啦title22222";
             completion(rsp);
@@ -82,7 +82,7 @@
             // ConnectorDemoIntentResponseCodeReady ConnectorDemoIntentResponseCodeSuccess
             // 可以将rsp的值传过去，redaycode不变， （successcode变成3，rsp.code=4）
             ConnectorDemoIntentResponse *rsp = [[ConnectorDemoIntentResponse alloc] initWithCode:ConnectorDemoIntentResponseCodeReady userActivity:nil];
-            rsp.name = @"小船来了111";
+            rsp.name = [self ConnectLocalizedString:@"name"];// @"小船来了111";//多语言测试
             rsp.title = @"终于登录成功啦title111";
             completion(rsp);
         } else  {
@@ -97,6 +97,27 @@
         ConnectorDemoIntentResponse *rsp = [[ConnectorDemoIntentResponse alloc] initWithCode:ConnectorDemoIntentResponseCodeFailure userActivity:nil];
         completion(rsp);
     }
+}
+
+
+- (NSString *)ConnectLocalizedString:(NSString *)translation_key {
+    
+    NSString * LocalizableStr = NSLocalizedString(translation_key, nil);
+    
+    //除了意大利语，其他都变成英语
+        if (
+            !([[[NSLocale preferredLanguages] objectAtIndex:0] rangeOfString:@"ko"].length >0) &&//韩国语
+            !([[[NSLocale preferredLanguages] objectAtIndex:0] rangeOfString:@"it"].length >0)//意大利语
+            ) {
+        NSString * path = [[NSBundle mainBundle] pathForResource:@"en" ofType:@"lproj"];
+        
+        NSBundle * languageBundle = [NSBundle bundleWithPath:path];
+        
+        LocalizableStr = [languageBundle localizedStringForKey:translation_key value:@"" table:nil];
+        
+    }
+    
+    return LocalizableStr;
 }
 
 @end

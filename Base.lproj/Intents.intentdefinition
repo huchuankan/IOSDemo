@@ -18,7 +18,7 @@
 	<array>
 		<dict>
 			<key>INIntentCategory</key>
-			<string>order</string>
+			<string>generic</string>
 			<key>INIntentDescription</key>
 			<string>siri control demo</string>
 			<key>INIntentDescriptionID</key>
@@ -166,7 +166,7 @@
 			<key>INIntentUserConfirmationRequired</key>
 			<true/>
 			<key>INIntentVerb</key>
-			<string>Order</string>
+			<string>Run</string>
 		</dict>
 	</array>
 	<key>INTypes</key>
