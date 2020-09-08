@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		88641D93250715C40050FD18 /* ActivityAddVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 88641D91250715C40050FD18 /* ActivityAddVC.m */; };
 		88641D94250715C40050FD18 /* ActivityAddVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 88641D91250715C40050FD18 /* ActivityAddVC.m */; };
-		88641D95250715C40050FD18 /* ActivityAddVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88641D92250715C40050FD18 /* ActivityAddVC.xib */; };
-		88641D96250715C40050FD18 /* ActivityAddVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88641D92250715C40050FD18 /* ActivityAddVC.xib */; };
 		88641D972507205D0050FD18 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 88AD75E224EB661100E304F6 /* Localizable.strings */; };
 		88641D982507205E0050FD18 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 88AD75E224EB661100E304F6 /* Localizable.strings */; };
 		889528E225021472004E17DF /* IntentHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 889528E125021472004E17DF /* IntentHandler.m */; };
@@ -106,7 +104,6 @@
 		5D786A2DD8E2E46BB2DF42F6 /* libPods-BlocBlinds.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BlocBlinds.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88641D90250715C40050FD18 /* ActivityAddVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActivityAddVC.h; sourceTree = "<group>"; };
 		88641D91250715C40050FD18 /* ActivityAddVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActivityAddVC.m; sourceTree = "<group>"; };
-		88641D92250715C40050FD18 /* ActivityAddVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityAddVC.xib; sourceTree = "<group>"; };
 		88641D9A2507208F0050FD18 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Intents.strings; sourceTree = "<group>"; };
 		88641D9C250720990050FD18 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Intents.strings"; sourceTree = "<group>"; };
 		88641DA0250720A80050FD18 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Intents.strings; sourceTree = "<group>"; };
@@ -261,7 +258,6 @@
 				8895291725021B48004E17DF /* SiriAddVC.xib */,
 				88641D90250715C40050FD18 /* ActivityAddVC.h */,
 				88641D91250715C40050FD18 /* ActivityAddVC.m */,
-				88641D92250715C40050FD18 /* ActivityAddVC.xib */,
 			);
 			path = siri;
 			sourceTree = "<group>";
@@ -557,7 +553,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				88AD75DF24EB661100E304F6 /* Localizable.strings in Resources */,
-				88641D95250715C40050FD18 /* ActivityAddVC.xib in Resources */,
 				8895291A25021B48004E17DF /* SiriAddVC.xib in Resources */,
 				88AD75C324E6784D00E304F6 /* BlocBlinds.storyboard in Resources */,
 				88AD758324E66C7B00E304F6 /* LaunchScreen.storyboard in Resources */,
@@ -585,7 +580,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				88AD75E024EB661100E304F6 /* Localizable.strings in Resources */,
-				88641D96250715C40050FD18 /* ActivityAddVC.xib in Resources */,
 				8895291B25021B48004E17DF /* SiriAddVC.xib in Resources */,
 				88AD75C424E6784D00E304F6 /* BlocBlinds.storyboard in Resources */,
 				88AD75B124E671AF00E304F6 /* LaunchScreen.storyboard in Resources */,

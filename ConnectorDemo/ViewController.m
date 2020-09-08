@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "SiriAddVC.h"
+#import "ActivityAddVC.h"
 
 @interface ViewController ()
 
@@ -34,7 +35,13 @@
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
-            
+        case 102:
+        {
+            ActivityAddVC *vc = [[ActivityAddVC alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+                       
         default:
             break;
     }

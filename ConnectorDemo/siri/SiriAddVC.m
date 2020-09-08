@@ -23,7 +23,6 @@
     // Do any additional setup after loading the view from its nib.
     self.titleList = @[@"已经添加的siri列表"];
     self.tableView.frame = CGRectMake(0, KStatusNavBarHeight + 84, KScreenWidth, ContentHeight - 84 );
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -37,11 +36,11 @@
         self.dataList = @[];
         
         [[INVoiceShortcutCenter sharedCenter] getAllVoiceShortcutsWithCompletion:^(NSArray<INVoiceShortcut *> * _Nullable voiceShortcuts, NSError * _Nullable error) {
+            //该方法不是在主线程运行的，所以如果ok了需要回到主线程来
             dispatch_async(dispatch_get_main_queue(), ^{
                 for (INVoiceShortcut *voiceShortcut in voiceShortcuts) {
-                    if ([voiceShortcut.shortcut.intent isKindOfClass:[ConnectorDemoIntent class]]) {
+                    if ([self checkCurrentClass:voiceShortcut]) {
                         //ConnectorDemoIntent* intentHave = (ConnectorDemoIntent*)voiceShortcut.shortcut.intent;
-                        //[temp addObject:intentHave.suggestedInvocationPhrase];
                         [temp addObject:voiceShortcut.invocationPhrase];
                         [self.intentArray addObject:voiceShortcut];
                     }
@@ -54,6 +53,10 @@
         }];
     }
     [self.tableView reloadData];
+}
+
+- (BOOL)checkCurrentClass:(INVoiceShortcut*)voiceShortcut API_AVAILABLE(ios(12.0)){
+    return [voiceShortcut.shortcut.intent isKindOfClass:[ConnectorDemoIntent class]];
 }
 
 -(void)itemClick:(NSInteger)tag {
@@ -76,17 +79,19 @@
 
 - (IBAction)addSiri:(UIButton *)sender {
     if (@available(iOS 12.0, *)) {
-        ConnectorDemoIntent *intent = [[ConnectorDemoIntent alloc] init];
-        intent.name = @"胡船勘";
-        intent.title = @"快来看啊！";
-        intent.suggestedInvocationPhrase = @"打开";
-        
-        INShortcut *shortCut = [[INShortcut alloc] initWithIntent:intent];
-        INUIAddVoiceShortcutViewController *vc = [[INUIAddVoiceShortcutViewController alloc] initWithShortcut:shortCut];
+        INUIAddVoiceShortcutViewController *vc = [[INUIAddVoiceShortcutViewController alloc] initWithShortcut:[self getINShortcut]];
         vc.delegate = self;
         [self presentViewController:vc animated:YES completion:nil];
-        
     }
+}
+
+-(INShortcut *)getINShortcut API_AVAILABLE(ios(12.0)){
+    ConnectorDemoIntent *intent = [[ConnectorDemoIntent alloc] init];
+    intent.name = @"胡船勘";
+    intent.title = @"快来看啊！";
+    intent.suggestedInvocationPhrase = @"打开";
+    INShortcut *shortCut = [[INShortcut alloc] initWithIntent:intent];
+    return shortCut;
 }
 
 

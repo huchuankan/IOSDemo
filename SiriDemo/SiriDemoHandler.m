@@ -104,7 +104,7 @@
     
     NSString * LocalizableStr = NSLocalizedString(translation_key, nil);
     
-    //除了意大利语，其他都变成英语
+    //除了意大利语和韩语，其他都变成英语
         if (
             !([[[NSLocale preferredLanguages] objectAtIndex:0] rangeOfString:@"ko"].length >0) &&//韩国语
             !([[[NSLocale preferredLanguages] objectAtIndex:0] rangeOfString:@"it"].length >0)//意大利语

@@ -8,120 +8,95 @@
 
 #import "ActivityAddVC.h"
 #import <Intents/Intents.h>
-//#import "CSSearchab"
+#import <IntentsUI/IntentsUI.h>
+#import <CoreSpotlight/CoreSpotlight.h>
+//#import "NSUserActivity+sport"
 
-@interface ActivityAddVC ()
-
-@property (nonatomic, strong) NSUserActivity *userActivity;
+@interface ActivityAddVC()
 
 @end
 
 @implementation ActivityAddVC
 
+//子类继承父类中xib元件
+- (instancetype)initWithNibName:(NSString* )nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:@"SiriAddVC" bundle:nibBundleOrNil];
+    if (self) {
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
     self.titleList = @[@"已经添加的Activity列表"];
-    self.tableView.frame = CGRectMake(0, KStatusNavBarHeight + 84, KScreenWidth, ContentHeight - 84 );
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-//    [self refreshSiri];
+    [super viewWillAppear:animated];
 }
-//
-//- (void)refreshSiri {
-//    if (@available(iOS 12.0, *)) {
-//        NSMutableArray *temp = [NSMutableArray array];
-//        self.intentArray = [NSMutableArray array];
-//        self.dataList = @[];
-//
-//        [[INVoiceShortcutCenter sharedCenter] getAllVoiceShortcutsWithCompletion:^(NSArray<INVoiceShortcut *> * _Nullable voiceShortcuts, NSError * _Nullable error) {
-//            dispatch_async(dispatch_get_main_queue(), ^{
-//                for (INVoiceShortcut *voiceShortcut in voiceShortcuts) {
-//                    if ([voiceShortcut.shortcut.intent isKindOfClass:[ConnectorDemoIntent class]]) {
-//                        //ConnectorDemoIntent* intentHave = (ConnectorDemoIntent*)voiceShortcut.shortcut.intent;
-//                        //[temp addObject:intentHave.suggestedInvocationPhrase];
-//                        [temp addObject:voiceShortcut.invocationPhrase];
-//                        [self.intentArray addObject:voiceShortcut];
-//                    }
-//                }
-//                if (self.intentArray.count > 0) {
-//                    self.dataList = [NSArray arrayWithObject:temp];
-//                    [self.tableView reloadData];
-//                }
-//            });
-//        }];
-//    }
-//    [self.tableView reloadData];
-//}
 
--(void)itemClick:(NSInteger)tag {
-//    NSInteger section = (tag - 101) / 100;
-//    NSInteger row = (tag - 101) % 100;
-//
-//    if (@available(iOS 12.0, *)) {
-//        if (section == 0) {
-//            NSArray *sectionArr = self.dataList[section];
-//            if (row >= 0 && row < sectionArr.count && row < self.intentArray.count ) {
-//                INVoiceShortcut *intent = self.intentArray[row];
-//                INUIEditVoiceShortcutViewController* vc = [[INUIEditVoiceShortcutViewController alloc] initWithVoiceShortcut:intent];
-//                vc.delegate = self;
-//                [self presentViewController:vc animated:YES completion:nil];
-//            }
-//        }
-//    }
+// 父类方法重写
+- (BOOL)checkCurrentClass:(INVoiceShortcut*)voiceShortcut API_AVAILABLE(ios(12.0)){
+    BOOL flag = [voiceShortcut.shortcut.userActivity isKindOfClass:[NSUserActivity class]];
+    return flag;
+}
+
+// 父类方法重写
+-(INShortcut *)getINShortcut API_AVAILABLE(ios(12.0)){
+    NSUserActivity *activity = [[NSUserActivity alloc] initWithActivityType:@"ConnectorDemoActivity" title:@"人生在于运动" suggestedPhrase:@"做运动"];
+
+    // 以下为附带的 在苹果搜索的时候，会搜索处图文信息，可以点击打开，打开时候和打开activity调用同一代码入口，
+    // 只是简单代码示例，
+    // Spotlight在iOS9上做了一些新的改进, 也就是开放了一些新的API, 通过Core Spotlight Framework你可以在你的app中集成Spotlight。集成Spotlight的App可以在Spotlight中搜索App的内容，并且通过内容打开相关页面。
+    CSSearchableItemAttributeSet * attributes = [[CSSearchableItemAttributeSet alloc] initWithItemContentType:CSSearchableItemActionType];
+    UIImage *icon = [UIImage imageNamed:@"sport"];
+    attributes.thumbnailData = UIImageJPEGRepresentation(icon,0.4);
+    attributes.title = @"每日运动";
+    attributes.keywords = @[@"每天",@"每日",@"运动",@"坚持"];  // 关键字,NSArray格式
+    attributes.contentDescription = @"要坚持哦，身材越来越好，身体也越来越好";  // 描述
+    activity.contentAttributeSet = attributes;
+
+    CSSearchableItem *item = [[CSSearchableItem alloc] initWithUniqueIdentifier:@"123" domainIdentifier:@"domainId" attributeSet:attributes];
+    [[CSSearchableIndex defaultSearchableIndex] indexSearchableItems:@[item] completionHandler:^(NSError * error) {
+        if (error) {
+            NSLog(@"indexSearchableItems Error:%@",error.localizedDescription);
+            
+        }
+    }];
+       
+    return  [[INShortcut alloc] initWithUserActivity:activity];
 }
 
 
-- (IBAction)addActivity:(UIButton *)sender {
-    
-//    if (@available(iOS 12.0, *)) {
-//        ConnectorDemoIntent *intent = [[ConnectorDemoIntent alloc] init];
-//        intent.name = @"胡船勘";
-//        intent.title = @"快来看啊！";
-//        intent.suggestedInvocationPhrase = @"打开";
-//
-//        INShortcut *shortCut = [[INShortcut alloc] initWithIntent:intent];
-//        INUIAddVoiceShortcutViewController *vc = [[INUIAddVoiceShortcutViewController alloc] initWithShortcut:shortCut];
-//        vc.delegate = self;
-//        [self presentViewController:vc animated:YES completion:nil];
-//
-//    }
-    self.userActivity = [self donateSportActivity];
-}
+@end
 
-//此方法返回一个 NSUserActivity 对象。
-- (NSUserActivity *)donateSportActivity{
-    //根据plist文件的值，创建 UserActivity
-    NSUserActivity *checkInActivity = [[NSUserActivity alloc] initWithActivityType:@"com.xxxx.xxxx-sports"];
 
-    //设置 YES，通过系统的搜索，可以搜索到该 UserActivity
-    checkInActivity.eligibleForSearch = YES;
 
-    //允许系统预测用户行为，并在合适的时候给出提醒。（搜索界面，屏锁界面等。）
-    if (@available(iOS 12.0, *)) {
-        checkInActivity.eligibleForPrediction = YES;
+
+
+@implementation  NSUserActivity(sport)
+
+- (instancetype)initWithActivityType:(NSString *)activityType title:(NSString *)title suggestedPhrase:(NSString *)phtase {
+    self = [self initWithActivityType:activityType];
+    if (self) {
+        //设置 YES，通过系统的搜索，可以搜索到该 UserActivity
+        self.eligibleForSearch = YES;
+
+        //允许系统预测用户行为，并在合适的时候给出提醒。（搜索界面，屏锁界面等。）
+        if (@available(iOS 12.0, *)) {
+            self.eligibleForPrediction = YES;
+        }
+
+        self.title = title;
+
+        //引导用户新建语音引导（具体效果见下图）
+        if (phtase) {
+            if (@available(iOS 12.0, *)) {
+                self.suggestedInvocationPhrase = phtase;
+            }
+        }
     }
-
-    checkInActivity.title = @"人生在于运动";
-
-    //引导用户新建语音引导（具体效果见下图）
-    if (@available(iOS 12.0, *)) {
-        checkInActivity.suggestedInvocationPhrase = @"做运动";
-    }
-
-//    CSSearchableItemAttributeSet * attributes = [[CSSearchableItemAttributeSet alloc] init];
-//
-//    UIImage *icon = [UIImage imageNamed:@"ic_tool_sport"];
-//    attributes.thumbnailData = UIImagePNGRepresentation(icon);
-//
-//    attributes.contentDescription = @"要坚持哦";
-//
-//    checkInActivity.contentAttributeSet = attributes;
-//
-    return checkInActivity;
+    return  self;
 }
-
 
 @end
