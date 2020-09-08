@@ -94,9 +94,9 @@
             
         }
     } else {
-        
+        ConnectorDemoIntentResponse *rsp = [[ConnectorDemoIntentResponse alloc] initWithCode:ConnectorDemoIntentResponseCodeFailure userActivity:nil];
+        completion(rsp);
     }
-    
 }
 
 @end
