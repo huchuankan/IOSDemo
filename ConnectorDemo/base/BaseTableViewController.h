@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BaseTableViewController : UIViewController
+@interface BaseTableViewController : BaseViewController
 
 @property (strong, nonatomic) UITableView *tableView;
 @property (copy,nonatomic) NSArray *titleList;

@@ -18,6 +18,8 @@
 #import "Masonry.h"
 #import "MJRefresh.h"
 #import "Constant.h"
+#import "BaseViewController.h"
+
 //#import "HUDUtil.h"
 //#import "UIView+TYAlertView.h"
 //#import "Util.h"

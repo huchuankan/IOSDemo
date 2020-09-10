@@ -11,6 +11,12 @@
 		88641D94250715C40050FD18 /* ActivityAddVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 88641D91250715C40050FD18 /* ActivityAddVC.m */; };
 		88641D972507205D0050FD18 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 88AD75E224EB661100E304F6 /* Localizable.strings */; };
 		88641D982507205E0050FD18 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 88AD75E224EB661100E304F6 /* Localizable.strings */; };
+		88641DAA250A27600050FD18 /* WIfiVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 88641DA8250A27600050FD18 /* WIfiVC.m */; };
+		88641DAB250A27600050FD18 /* WIfiVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 88641DA8250A27600050FD18 /* WIfiVC.m */; };
+		88641DAC250A27600050FD18 /* WIfiVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88641DA9250A27600050FD18 /* WIfiVC.xib */; };
+		88641DAD250A27600050FD18 /* WIfiVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88641DA9250A27600050FD18 /* WIfiVC.xib */; };
+		88641DB0250A27730050FD18 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88641DAF250A27730050FD18 /* BaseViewController.m */; };
+		88641DB1250A27730050FD18 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88641DAF250A27730050FD18 /* BaseViewController.m */; };
 		889528E225021472004E17DF /* IntentHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 889528E125021472004E17DF /* IntentHandler.m */; };
 		889528EA25021472004E17DF /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 889528E925021472004E17DF /* IntentsUI.framework */; };
 		889528EE25021472004E17DF /* IntentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 889528ED25021472004E17DF /* IntentViewController.m */; };
@@ -108,6 +114,11 @@
 		88641D9C250720990050FD18 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Intents.strings"; sourceTree = "<group>"; };
 		88641DA0250720A80050FD18 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Intents.strings; sourceTree = "<group>"; };
 		88641DA4250720C10050FD18 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Intents.strings; sourceTree = "<group>"; };
+		88641DA7250A27600050FD18 /* WIfiVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WIfiVC.h; sourceTree = "<group>"; };
+		88641DA8250A27600050FD18 /* WIfiVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WIfiVC.m; sourceTree = "<group>"; };
+		88641DA9250A27600050FD18 /* WIfiVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WIfiVC.xib; sourceTree = "<group>"; };
+		88641DAE250A27730050FD18 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		88641DAF250A27730050FD18 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		889528D8250204C0004E17DF /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		889528DE25021472004E17DF /* SiriDemo.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SiriDemo.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		889528E025021472004E17DF /* IntentHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntentHandler.h; sourceTree = "<group>"; };
@@ -223,6 +234,25 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		88641DA5250A26F60050FD18 /* section */ = {
+			isa = PBXGroup;
+			children = (
+				88641DA6250A271D0050FD18 /* wifi */,
+				8895291225021A93004E17DF /* siri */,
+			);
+			path = section;
+			sourceTree = "<group>";
+		};
+		88641DA6250A271D0050FD18 /* wifi */ = {
+			isa = PBXGroup;
+			children = (
+				88641DA7250A27600050FD18 /* WIfiVC.h */,
+				88641DA8250A27600050FD18 /* WIfiVC.m */,
+				88641DA9250A27600050FD18 /* WIfiVC.xib */,
+			);
+			path = wifi;
+			sourceTree = "<group>";
+		};
 		889528DF25021472004E17DF /* SiriDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -276,6 +306,8 @@
 			children = (
 				889529282505B408004E17DF /* BaseTableViewController.h */,
 				889529292505B408004E17DF /* BaseTableViewController.m */,
+				88641DAE250A27730050FD18 /* BaseViewController.h */,
+				88641DAF250A27730050FD18 /* BaseViewController.m */,
 			);
 			path = base;
 			sourceTree = "<group>";
@@ -312,9 +344,9 @@
 		88AD757224E66C7800E304F6 /* ConnectorDemo */ = {
 			isa = PBXGroup;
 			children = (
+				88641DA5250A26F60050FD18 /* section */,
 				889529272505B3AF004E17DF /* base */,
 				8895291425021ADE004E17DF /* util */,
-				8895291225021A93004E17DF /* siri */,
 				88AD75E724EB7E3100E304F6 /* ConnectorDemo.entitlements */,
 				88AD757324E66C7800E304F6 /* AppDelegate.h */,
 				88AD757424E66C7800E304F6 /* AppDelegate.m */,
@@ -558,6 +590,7 @@
 				88AD758324E66C7B00E304F6 /* LaunchScreen.storyboard in Resources */,
 				88AD758024E66C7B00E304F6 /* Assets.xcassets in Resources */,
 				88AD757E24E66C7800E304F6 /* Main.storyboard in Resources */,
+				88641DAC250A27600050FD18 /* WIfiVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -585,6 +618,7 @@
 				88AD75B124E671AF00E304F6 /* LaunchScreen.storyboard in Resources */,
 				88AD75B324E671AF00E304F6 /* Main.storyboard in Resources */,
 				88AD75B424E671AF00E304F6 /* BlocBlinds.xcassets in Resources */,
+				88641DAD250A27600050FD18 /* WIfiVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -679,8 +713,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				88AD757B24E66C7800E304F6 /* ViewController.m in Sources */,
+				88641DB0250A27730050FD18 /* BaseViewController.m in Sources */,
 				8895291825021B48004E17DF /* SiriAddVC.m in Sources */,
 				88AD75BE24E6778600E304F6 /* main.m in Sources */,
+				88641DAA250A27600050FD18 /* WIfiVC.m in Sources */,
 				889529062502154D004E17DF /* Intents.intentdefinition in Sources */,
 				8895292A2505B409004E17DF /* BaseTableViewController.m in Sources */,
 				88641D93250715C40050FD18 /* ActivityAddVC.m in Sources */,
@@ -709,8 +745,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				88AD75AC24E671AF00E304F6 /* ViewController.m in Sources */,
+				88641DB1250A27730050FD18 /* BaseViewController.m in Sources */,
 				8895291925021B48004E17DF /* SiriAddVC.m in Sources */,
 				88AD75BF24E6779F00E304F6 /* main.m in Sources */,
+				88641DAB250A27600050FD18 /* WIfiVC.m in Sources */,
 				889529072502154D004E17DF /* Intents.intentdefinition in Sources */,
 				8895292B2505B409004E17DF /* BaseTableViewController.m in Sources */,
 				88641D94250715C40050FD18 /* ActivityAddVC.m in Sources */,
