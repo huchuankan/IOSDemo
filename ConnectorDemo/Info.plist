@@ -44,5 +44,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>我们需要您的位置信息，用来获取wifi信息和提供更优质服务！</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>我们需要您的位置信息，用来获取wifi信息和提供更优质服务！</string>
 </dict>
 </plist>

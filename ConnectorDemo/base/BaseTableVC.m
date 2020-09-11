@@ -1,18 +1,18 @@
 //
-//  BaseTableViewController.m
+//  BaseTableVC.m
 //  ConnectorDemo
 //
 //  Created by huck on 2020/9/7.
 //  Copyright © 2020 huck. All rights reserved.
 //
 
-#import "BaseTableViewController.h"
+#import "BaseTableVC.h"
 
-@interface BaseTableViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface BaseTableVC ()<UITableViewDelegate,UITableViewDataSource>
 
 @end
 
-@implementation BaseTableViewController
+@implementation BaseTableVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];

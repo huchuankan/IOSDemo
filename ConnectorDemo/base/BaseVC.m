@@ -1,24 +1,30 @@
 //
-//  WIfiVC.m
+//  BaseVC.m
 //  ConnectorDemo
 //
 //  Created by huck on 2020/9/10.
 //  Copyright © 2020 huck. All rights reserved.
 //
 
-#import "WIfiVC.h"
+#import "BaseVC.h"
 
-@interface WIfiVC ()
+@interface BaseVC ()
 
 @end
 
-@implementation WIfiVC
+@implementation BaseVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    // Do any additional setup after loading the view.
+    NSString *clsName = NSStringFromClass(self.class);
+    if (clsName) {
+        if([clsName hasSuffix:@"VC"]) {
+            clsName = [clsName substringToIndex: clsName.length - 2];
+        }
+    }
+    self.title = clsName;
 }
-
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];

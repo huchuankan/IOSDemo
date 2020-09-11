@@ -8,7 +8,7 @@
 // 
 
 #import <UIKit/UIKit.h>
-#import "BaseTableViewController.h"
+#import "BaseTableVC.h"
 #import "SiriAddVC.h"
 
 NS_ASSUME_NONNULL_BEGIN

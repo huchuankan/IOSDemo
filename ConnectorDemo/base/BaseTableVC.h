@@ -1,5 +1,5 @@
 //
-//  BaseTableViewController.h
+//  BaseTableVC.h
 //  ConnectorDemo
 //
 //  Created by huck on 2020/9/7.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BaseTableViewController : BaseViewController
+@interface BaseTableVC : BaseVC
 
 @property (strong, nonatomic) UITableView *tableView;
 @property (copy,nonatomic) NSArray *titleList;

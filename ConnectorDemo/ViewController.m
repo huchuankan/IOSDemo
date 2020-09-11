@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "SiriAddVC.h"
 #import "ActivityAddVC.h"
-#import "WIfiVC.h"
+#import "WifiVC.h"
 
 @interface ViewController ()
 
@@ -51,7 +51,7 @@
             break;
         case 201:
         {
-            WIfiVC  *vc = [[WIfiVC alloc] init];
+            WifiVC  *vc = [[WifiVC alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;

@@ -1,5 +1,5 @@
 //
-//  WIfiVC.h
+//  BaseVC.h
 //  ConnectorDemo
 //
 //  Created by huck on 2020/9/10.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface WIfiVC : BaseViewController
+@interface BaseVC : UIViewController
 
 @end
 

@@ -11,6 +11,8 @@
 #ifndef Header_h
 #define Header_h
 
+//字体
+#define Font(x) [UIFont systemFontOfSize:x]
 
 //#define DooyaSDK [DooyaAppClient SharedInstance]
 #define BridgeSDK [BridgeManager SharedInstance]
