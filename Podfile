@@ -29,10 +29,10 @@ target ‘ConnectorDemo’ do
 #    pod 'AMapLocation'
 #    pod 'AMap2DMap'
 #    pod 'AMapSearch'
-    pod 'GoogleMaps', '~> 3.8.0'
-    pod 'GooglePlaces', '~> 3.8.0'
+   #   pod 'GoogleMaps', '~> 3.8.0'
+   # pod 'GooglePlaces', '~> 3.8.0'
     pod 'FLAnimatedImage', '~> 1.0.12'
-    pod 'GTSDK'
+   # pod 'GTSDK'
 #    pod 'Firebase'
 #    pod 'Firebase/Messaging'
 end

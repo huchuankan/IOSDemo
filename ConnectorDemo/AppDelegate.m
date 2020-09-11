@@ -25,6 +25,9 @@
     NSString *test = NSLocalizedString(@"test1", "just a testing");
     NSLog(@"%@",test);
     
+    // 隐藏返回图标的文字
+    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(-1000, 0) forBarMetrics:UIBarMetricsDefault];
+    
     return YES;
 }
 
