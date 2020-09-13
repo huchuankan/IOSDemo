@@ -292,9 +292,9 @@
 			isa = PBXGroup;
 			children = (
 				88641DC1250B465C0050FD18 /* WTGetLocation.h */,
-				88641DC2250B465C0050FD18 /* CLGeocoder+custom.m */,
 				88641DC3250B465C0050FD18 /* WTGetLocation.m */,
 				88641DC4250B465C0050FD18 /* CLGeocoder+custom.h */,
+				88641DC2250B465C0050FD18 /* CLGeocoder+custom.m */,
 			);
 			path = CWLocation;
 			sourceTree = "<group>";

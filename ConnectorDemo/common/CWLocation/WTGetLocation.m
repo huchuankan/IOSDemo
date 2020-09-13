@@ -67,6 +67,7 @@
     }
 }
 
+
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
     [manager stopUpdatingLocation];
     
@@ -84,10 +85,10 @@
         }
         [[NSUserDefaults standardUserDefaults] synchronize];
         
-        _curCity = cityName;
-        _curSubCity = subCityName;
+        weakSelf.curCity = cityName;
+        weakSelf.curSubCity = subCityName;
         
-        locationBlock(0,cityName,subCityName);
+        self->locationBlock(0,cityName,subCityName);
         
     }];
 }
