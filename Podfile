@@ -35,4 +35,6 @@ target ‘ConnectorDemo’ do
    # pod 'GTSDK'
 #    pod 'Firebase'
 #    pod 'Firebase/Messaging'
+#my addition in iosdemo 
+     pod 'Reachability', '~> 3.2'
 end

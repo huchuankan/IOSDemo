@@ -29,6 +29,10 @@
 		88641DCF250B5BB10050FD18 /* TYAlertView+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 88641DCC250B5BB10050FD18 /* TYAlertView+Custom.m */; };
 		88641DD4250B61790050FD18 /* UIImage+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 88641DD3250B61790050FD18 /* UIImage+Custom.m */; };
 		88641DD5250B61790050FD18 /* UIImage+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 88641DD3250B61790050FD18 /* UIImage+Custom.m */; };
+		889388E8250EEE8F00104669 /* NetWorkVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 889388E7250EEE8F00104669 /* NetWorkVC.m */; };
+		889388E9250EEE8F00104669 /* NetWorkVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 889388E7250EEE8F00104669 /* NetWorkVC.m */; };
+		889388F3250EFC4600104669 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 889388F2250EFC4600104669 /* SystemConfiguration.framework */; };
+		889388F5250F02D900104669 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 889388F4250F02D900104669 /* CoreTelephony.framework */; };
 		889528E225021472004E17DF /* IntentHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 889528E125021472004E17DF /* IntentHandler.m */; };
 		889528EA25021472004E17DF /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 889528E925021472004E17DF /* IntentsUI.framework */; };
 		889528EE25021472004E17DF /* IntentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 889528ED25021472004E17DF /* IntentViewController.m */; };
@@ -145,6 +149,10 @@
 		88641DCD250B5BB10050FD18 /* TYAlertView+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TYAlertView+Custom.h"; sourceTree = "<group>"; };
 		88641DD2250B61790050FD18 /* UIImage+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Custom.h"; sourceTree = "<group>"; };
 		88641DD3250B61790050FD18 /* UIImage+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Custom.m"; sourceTree = "<group>"; };
+		889388E6250EEE8F00104669 /* NetWorkVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetWorkVC.h; sourceTree = "<group>"; };
+		889388E7250EEE8F00104669 /* NetWorkVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetWorkVC.m; sourceTree = "<group>"; };
+		889388F2250EFC4600104669 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		889388F4250F02D900104669 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		889528D8250204C0004E17DF /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		889528DE25021472004E17DF /* SiriDemo.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SiriDemo.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		889528E025021472004E17DF /* IntentHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntentHandler.h; sourceTree = "<group>"; };
@@ -220,6 +228,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				889388F5250F02D900104669 /* CoreTelephony.framework in Frameworks */,
+				889388F3250EFC4600104669 /* SystemConfiguration.framework in Frameworks */,
 				AAD5090ED1EE9EA77654A02F /* libPods-ConnectorDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +284,8 @@
 			children = (
 				88641DA7250A27600050FD18 /* WifiVC.h */,
 				88641DA8250A27600050FD18 /* WifiVC.m */,
+				889388E6250EEE8F00104669 /* NetWorkVC.h */,
+				889388E7250EEE8F00104669 /* NetWorkVC.m */,
 			);
 			path = wifi;
 			sourceTree = "<group>";
@@ -456,6 +468,8 @@
 		C8F03C22EDC71FFAA9714993 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				889388F4250F02D900104669 /* CoreTelephony.framework */,
+				889388F2250EFC4600104669 /* SystemConfiguration.framework */,
 				88641DC9250B475B0050FD18 /* CoreLocation.framework */,
 				88641DBD250B45550050FD18 /* CFNetwork.framework */,
 				5D786A2DD8E2E46BB2DF42F6 /* libPods-BlocBlinds.a */,
@@ -793,6 +807,7 @@
 				88641DAA250A27600050FD18 /* WifiVC.m in Sources */,
 				88641DCE250B5BB10050FD18 /* TYAlertView+Custom.m in Sources */,
 				88641DD4250B61790050FD18 /* UIImage+Custom.m in Sources */,
+				889388E8250EEE8F00104669 /* NetWorkVC.m in Sources */,
 				889529062502154D004E17DF /* Intents.intentdefinition in Sources */,
 				88641DB5250B15280050FD18 /* BaseInfoShowVC.m in Sources */,
 				8895292A2505B409004E17DF /* BaseTableVC.m in Sources */,
@@ -831,6 +846,7 @@
 				88641DAB250A27600050FD18 /* WifiVC.m in Sources */,
 				88641DCF250B5BB10050FD18 /* TYAlertView+Custom.m in Sources */,
 				88641DD5250B61790050FD18 /* UIImage+Custom.m in Sources */,
+				889388E9250EEE8F00104669 /* NetWorkVC.m in Sources */,
 				889529072502154D004E17DF /* Intents.intentdefinition in Sources */,
 				88641DB6250B15280050FD18 /* BaseInfoShowVC.m in Sources */,
 				8895292B2505B409004E17DF /* BaseTableVC.m in Sources */,
@@ -1127,6 +1143,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.smarthome.app.connector;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -1149,6 +1166,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.smarthome.app.connector;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};

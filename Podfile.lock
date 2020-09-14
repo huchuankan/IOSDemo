@@ -6,6 +6,7 @@ PODS:
   - Masonry (1.1.0)
   - MJRefresh (3.4.3)
   - pop (1.0.12)
+  - Reachability (3.2)
   - SDWebImage (5.8.4):
     - SDWebImage/Core (= 5.8.4)
   - SDWebImage/Core (5.8.4)
@@ -19,6 +20,7 @@ DEPENDENCIES:
   - Masonry
   - MJRefresh (~> 3.4.3)
   - pop (~> 1.0.8)
+  - Reachability (~> 3.2)
   - SDWebImage (~> 5.8.0)
   - TYAlertController
 
@@ -31,6 +33,7 @@ SPEC REPOS:
     - Masonry
     - MJRefresh
     - pop
+    - Reachability
     - SDWebImage
     - TYAlertController
 
@@ -42,9 +45,10 @@ SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJRefresh: 53e3e3219f204425ee6d3e62e8733d3295944cd6
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   SDWebImage: cf6922231e95550934da2ada0f20f2becf2ceba9
   TYAlertController: c121090edb0bea7426f987da94cdddd81eef4231
 
-PODFILE CHECKSUM: 2845b7d1a1dea195e337c70af79a4469e549a5fe
+PODFILE CHECKSUM: ec263659ec38b448086f2bec7a65286afd6ab587
 
 COCOAPODS: 1.9.3

@@ -10,6 +10,7 @@
 #import "SiriAddVC.h"
 #import "ActivityAddVC.h"
 #import "WifiVC.h"
+#import "NetWorkVC.h"
 
 @interface ViewController ()
 
@@ -23,12 +24,12 @@
     self.title = @"首页";
     self.titleList = @[
         @"Siri Shortcuts 集成",
-        @"wifi",
+        @"wifi和网络信号",
         @"其他功能"
     ];
     self.dataList = @[
         @[@"通过Intents",@"通过NSUserActivity"],
-        @[@"获取手机wifi的信息"],
+        @[@"获取手机wifi的信息",@"获取手机网络类型和强度"],
         @[@"其他功能"]
     ];
 }
@@ -36,34 +37,40 @@
 
 -(void)itemClick:(NSInteger)tag {
     NSLog(@"---%zi----",tag);
+    BaseVC *vc = nil;
     switch (tag) {
         case 101:
         {
-            SiriAddVC *vc = [[SiriAddVC alloc] init];
-            [self.navigationController pushViewController:vc animated:YES];
+            vc = [[SiriAddVC alloc] init];
         }
             break;
         case 102:
         {
-            ActivityAddVC *vc = [[ActivityAddVC alloc] init];
-            [self.navigationController pushViewController:vc animated:YES];
+            vc = [[ActivityAddVC alloc] init];
         }
             break;
         case 201:
         {
-            WifiVC  *vc = [[WifiVC alloc] init];
-            [self.navigationController pushViewController:vc animated:YES];
+            vc = [[WifiVC alloc] init];
+        }
+            break;
+        case 202:
+        {
+            vc = [[NetWorkVC alloc] init];
         }
             break;
         case 301:
         {
-  
+            
         }
             break;
 
                        
         default:
             break;
+    }
+    if (vc) {
+        [self.navigationController pushViewController:vc animated:YES];
     }
     
 }
