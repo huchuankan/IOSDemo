@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import <Intents/Intents.h>
 #import "ConnectorDemoIntent.h"
+//#import <GoogleMaps/GoogleMaps.h>
 
 @interface AppDelegate ()
 
@@ -27,6 +28,10 @@
     
     // 隐藏返回图标的文字
     [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(-1000, 0) forBarMetrics:UIBarMetricsDefault];
+
+    //google地图
+//    [GMSServices provideAPIKey:@"my-API-KEY"];
+
     
     return YES;
 }

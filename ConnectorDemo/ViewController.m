@@ -11,6 +11,7 @@
 #import "ActivityAddVC.h"
 #import "WifiVC.h"
 #import "NetWorkVC.h"
+//#import "GoogleMapVC.h"
 
 @interface ViewController ()
 
@@ -25,11 +26,13 @@
     self.titleList = @[
         @"Siri Shortcuts 集成",
         @"wifi和网络信号",
+        @"谷歌地图（要翻墙）",
         @"其他功能"
     ];
     self.dataList = @[
         @[@"通过Intents",@"通过NSUserActivity"],
         @[@"获取手机wifi的信息",@"获取手机网络类型和强度"],
+        @[@"谷歌地图接入"],//AIzaSyAJ1imjw4IYry_h2jBD_gx5ZZ3AjpRxtFQ
         @[@"其他功能"]
     ];
 }
@@ -61,7 +64,9 @@
             break;
         case 301:
         {
-            
+            //打开注释使用谷歌地图，
+            //谷歌地图使用，编译报错，去GoogleMapVC.h查看使用方式
+//            vc = [[GoogleMapVC alloc] init];
         }
             break;
 

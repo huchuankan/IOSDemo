@@ -70,6 +70,7 @@
 		88AD75C424E6784D00E304F6 /* BlocBlinds.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88AD75C224E6784D00E304F6 /* BlocBlinds.storyboard */; };
 		88AD75DF24EB661100E304F6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 88AD75E224EB661100E304F6 /* Localizable.strings */; };
 		88AD75E024EB661100E304F6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 88AD75E224EB661100E304F6 /* Localizable.strings */; };
+		88E3A5C62515B863008983E6 /* GoogleMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E3A5C42515B863008983E6 /* GoogleMapVC.m */; };
 		AAD5090ED1EE9EA77654A02F /* libPods-ConnectorDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1170DC1FD678AB55F090D9B6 /* libPods-ConnectorDemo.a */; };
 		DECAE197C7DD6B80B3382174 /* libPods-BlocBlinds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D786A2DD8E2E46BB2DF42F6 /* libPods-BlocBlinds.a */; };
 /* End PBXBuildFile section */
@@ -203,6 +204,8 @@
 		88AD75E324EB661200E304F6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		88AD75E624EB662900E304F6 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		88AD75E724EB7E3100E304F6 /* ConnectorDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ConnectorDemo.entitlements; sourceTree = "<group>"; };
+		88E3A5C32515B863008983E6 /* GoogleMapVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoogleMapVC.h; sourceTree = "<group>"; };
+		88E3A5C42515B863008983E6 /* GoogleMapVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoogleMapVC.m; sourceTree = "<group>"; };
 		9840915C456CDCF7BD46C75A /* Pods-ConnectorDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConnectorDemo.release.xcconfig"; path = "Target Support Files/Pods-ConnectorDemo/Pods-ConnectorDemo.release.xcconfig"; sourceTree = "<group>"; };
 		9AE5B716699CFBE0344274FB /* Pods-BlocBlinds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlocBlinds.debug.xcconfig"; path = "Target Support Files/Pods-BlocBlinds/Pods-BlocBlinds.debug.xcconfig"; sourceTree = "<group>"; };
 		A5FE402EA0F8D24C91603858 /* Pods-ConnectorDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConnectorDemo.debug.xcconfig"; path = "Target Support Files/Pods-ConnectorDemo/Pods-ConnectorDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -273,6 +276,7 @@
 		88641DA5250A26F60050FD18 /* section */ = {
 			isa = PBXGroup;
 			children = (
+				88E3A5AC2515B658008983E6 /* map */,
 				88641DA6250A271D0050FD18 /* wifi */,
 				8895291225021A93004E17DF /* siri */,
 			);
@@ -463,6 +467,15 @@
 				88AD759C24E66C7B00E304F6 /* Info.plist */,
 			);
 			path = ConnectorDemoUITests;
+			sourceTree = "<group>";
+		};
+		88E3A5AC2515B658008983E6 /* map */ = {
+			isa = PBXGroup;
+			children = (
+				88E3A5C32515B863008983E6 /* GoogleMapVC.h */,
+				88E3A5C42515B863008983E6 /* GoogleMapVC.m */,
+			);
+			path = map;
 			sourceTree = "<group>";
 		};
 		C8F03C22EDC71FFAA9714993 /* Frameworks */ = {
@@ -843,6 +856,7 @@
 				88641DC8250B465D0050FD18 /* WTGetLocation.m in Sources */,
 				88641DC6250B465D0050FD18 /* CLGeocoder+custom.m in Sources */,
 				88AD75BF24E6779F00E304F6 /* main.m in Sources */,
+				88E3A5C62515B863008983E6 /* GoogleMapVC.m in Sources */,
 				88641DAB250A27600050FD18 /* WifiVC.m in Sources */,
 				88641DCF250B5BB10050FD18 /* TYAlertView+Custom.m in Sources */,
 				88641DD5250B61790050FD18 /* UIImage+Custom.m in Sources */,

@@ -77,6 +77,7 @@
             //已经开启定位功能就不管他了
             [self refreshLocation];
         }else{//其他情况弹弹框让用户授权
+            //用户状态是授权一次，才会需要弹出"使用中"的框， 用户选择“使用中（前台）”，在回调方法中，可以进一步弹“always（后台）”
             self.locationManager = [[CLLocationManager alloc] init];
             self.locationManager.delegate = self; // 设置代理
             [self.locationManager requestWhenInUseAuthorization];
@@ -130,6 +131,8 @@
     switch (status) {
         case kCLAuthorizationStatusNotDetermined:
         {
+            [self refreshLocation];
+
 //            NSLog(@"用户还未决定授权");
             break;
         }

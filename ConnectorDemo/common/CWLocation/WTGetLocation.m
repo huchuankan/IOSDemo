@@ -26,8 +26,8 @@
     
     dispatch_once(&onceToken, ^{
         wtGetLocation = [[self alloc] init];
-        wtGetLocation.curCity = [[NSUserDefaults standardUserDefaults] objectForKey:locationCity];
-        wtGetLocation.curSubCity = [[NSUserDefaults standardUserDefaults] objectForKey:locationSubCity];
+//        wtGetLocation.curCity = [[NSUserDefaults standardUserDefaults] objectForKey:locationCity];
+//        wtGetLocation.curSubCity = [[NSUserDefaults standardUserDefaults] objectForKey:locationSubCity];
     });
     
     return wtGetLocation;
@@ -63,6 +63,10 @@
         if([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]){
             [self.locationManager requestWhenInUseAuthorization]; //使用中授权
         }
+//        if ([self.locationManager respondsToSelector:@selector(requestAlwaysAuthorization)]) {
+//        [self.locationManager requestAlwaysAuthorization];
+//        }
+
         [self.locationManager startUpdatingLocation];
     }
 }
@@ -77,13 +81,13 @@
         weakSelf.isLocation = YES;
         weakSelf.curLocation = newLocation;
         
-        if (cityName) {
-            [[NSUserDefaults standardUserDefaults] setValue:cityName forKey:locationCity];
-        }
-        if (subCityName) {
-            [[NSUserDefaults standardUserDefaults] setValue:subCityName forKey:locationSubCity];
-        }
-        [[NSUserDefaults standardUserDefaults] synchronize];
+//        if (cityName) {
+//            [[NSUserDefaults standardUserDefaults] setValue:cityName forKey:locationCity];
+//        }
+//        if (subCityName) {
+//            [[NSUserDefaults standardUserDefaults] setValue:subCityName forKey:locationSubCity];
+//        }
+//        [[NSUserDefaults standardUserDefaults] synchronize];
         
         weakSelf.curCity = cityName;
         weakSelf.curSubCity = subCityName;

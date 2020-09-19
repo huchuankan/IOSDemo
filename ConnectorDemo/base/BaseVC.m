@@ -24,6 +24,10 @@
         }
     }
     self.title = clsName;
+    self.viewContent = [[UIView alloc] initWithFrame:CGRectMake(0, KStatusNavBarHeight, KScreenWidth, ContentHeight)];
+    self.viewContent.backgroundColor = [UIColor clearColor];
+    [self.view insertSubview:self.viewContent atIndex:0];
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
