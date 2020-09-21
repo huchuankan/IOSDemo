@@ -11,7 +11,9 @@
 #import "ActivityAddVC.h"
 #import "WifiVC.h"
 #import "NetWorkVC.h"
-//#import "GoogleMapVC.h"
+#if BlocBlinds
+#import "GoogleMapVC.h"
+#endif
 
 @interface ViewController ()
 
@@ -26,7 +28,11 @@
     self.titleList = @[
         @"Siri Shortcuts 集成",
         @"wifi和网络信号",
+#if BlocBlinds
         @"谷歌地图（要翻墙）",
+#else
+        @"谷歌地图（引入谷歌地图pod后在BlocBlinds这个Target运行）",
+#endif
         @"其他功能"
     ];
     self.dataList = @[
@@ -64,9 +70,11 @@
             break;
         case 301:
         {
-            //打开注释使用谷歌地图，
+            //选择BlocBlinds这个Target使用谷歌地图，
             //谷歌地图使用，编译报错，去GoogleMapVC.h查看使用方式
-//            vc = [[GoogleMapVC alloc] init];
+#if BlocBlinds
+            vc = [[GoogleMapVC alloc] init];
+#endif
         }
             break;
 

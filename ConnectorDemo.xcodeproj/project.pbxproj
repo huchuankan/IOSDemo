@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		880D44DE25182B89003376B6 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 880D44D425182B89003376B6 /* SVRadialGradientLayer.m */; };
+		880D44DF25182B89003376B6 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 880D44D425182B89003376B6 /* SVRadialGradientLayer.m */; };
+		880D44E025182B89003376B6 /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 880D44D725182B89003376B6 /* SVProgressAnimatedView.m */; };
+		880D44E125182B89003376B6 /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 880D44D725182B89003376B6 /* SVProgressAnimatedView.m */; };
+		880D44E225182B89003376B6 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 880D44DA25182B89003376B6 /* SVProgressHUD.m */; };
+		880D44E325182B89003376B6 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 880D44DA25182B89003376B6 /* SVProgressHUD.m */; };
+		880D44E425182B89003376B6 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 880D44DB25182B89003376B6 /* SVIndefiniteAnimatedView.m */; };
+		880D44E525182B89003376B6 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 880D44DB25182B89003376B6 /* SVIndefiniteAnimatedView.m */; };
+		880D44E625182B89003376B6 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 880D44DC25182B89003376B6 /* SVProgressHUD.bundle */; };
+		880D44E725182B89003376B6 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 880D44DC25182B89003376B6 /* SVProgressHUD.bundle */; };
+		880D450025182BCE003376B6 /* HUDUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 880D44FE25182BCD003376B6 /* HUDUtil.m */; };
+		880D450125182BCE003376B6 /* HUDUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 880D44FE25182BCD003376B6 /* HUDUtil.m */; };
+		880D4510251833F6003376B6 /* UIImageView+Connector.m in Sources */ = {isa = PBXBuildFile; fileRef = 880D450E251833F5003376B6 /* UIImageView+Connector.m */; };
+		880D4511251833F6003376B6 /* UIImageView+Connector.m in Sources */ = {isa = PBXBuildFile; fileRef = 880D450E251833F5003376B6 /* UIImageView+Connector.m */; };
+		880D452A25184BB8003376B6 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 889388F4250F02D900104669 /* CoreTelephony.framework */; };
+		880D452B25184BC5003376B6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 889388F2250EFC4600104669 /* SystemConfiguration.framework */; };
 		88641D93250715C40050FD18 /* ActivityAddVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 88641D91250715C40050FD18 /* ActivityAddVC.m */; };
 		88641D94250715C40050FD18 /* ActivityAddVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 88641D91250715C40050FD18 /* ActivityAddVC.m */; };
 		88641D972507205D0050FD18 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 88AD75E224EB661100E304F6 /* Localizable.strings */; };
@@ -125,6 +141,21 @@
 		1170DC1FD678AB55F090D9B6 /* libPods-ConnectorDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ConnectorDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		201A9F229179C352AC2EBE7A /* Pods-BlocBlinds.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlocBlinds.release.xcconfig"; path = "Target Support Files/Pods-BlocBlinds/Pods-BlocBlinds.release.xcconfig"; sourceTree = "<group>"; };
 		5D786A2DD8E2E46BB2DF42F6 /* libPods-BlocBlinds.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BlocBlinds.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		880D44D425182B89003376B6 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
+		880D44D525182B89003376B6 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		880D44D625182B89003376B6 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		880D44D725182B89003376B6 /* SVProgressAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressAnimatedView.m; sourceTree = "<group>"; };
+		880D44D825182B89003376B6 /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		880D44D925182B89003376B6 /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVRadialGradientLayer.h; sourceTree = "<group>"; };
+		880D44DA25182B89003376B6 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		880D44DB25182B89003376B6 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		880D44DC25182B89003376B6 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		880D44DD25182B89003376B6 /* SVProgressAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressAnimatedView.h; sourceTree = "<group>"; };
+		880D44FE25182BCD003376B6 /* HUDUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUDUtil.m; sourceTree = "<group>"; };
+		880D44FF25182BCE003376B6 /* HUDUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUDUtil.h; sourceTree = "<group>"; };
+		880D450E251833F5003376B6 /* UIImageView+Connector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Connector.m"; sourceTree = "<group>"; };
+		880D450F251833F6003376B6 /* UIImageView+Connector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Connector.h"; sourceTree = "<group>"; };
+		880D454E25184E26003376B6 /* BlocBlindsInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = BlocBlindsInfo.plist; sourceTree = "<group>"; };
 		88641D90250715C40050FD18 /* ActivityAddVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActivityAddVC.h; sourceTree = "<group>"; };
 		88641D91250715C40050FD18 /* ActivityAddVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActivityAddVC.m; sourceTree = "<group>"; };
 		88641D9A2507208F0050FD18 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Intents.strings; sourceTree = "<group>"; };
@@ -197,7 +228,6 @@
 		88AD759C24E66C7B00E304F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88AD75A824E671A400E304F6 /* BlocBlinds.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = BlocBlinds.xcassets; sourceTree = "<group>"; };
 		88AD75B824E671AF00E304F6 /* BlocBlinds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlocBlinds.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		88AD75B924E671AF00E304F6 /* BlocBlindsInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = BlocBlindsInfo.plist; path = "/Users/huck/工作/demo/ConnectorDemo/BlocBlindsInfo.plist"; sourceTree = "<absolute>"; };
 		88AD75C224E6784D00E304F6 /* BlocBlinds.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BlocBlinds.storyboard; sourceTree = "<group>"; };
 		88AD75C524E678F100E304F6 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		88AD75E124EB661100E304F6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -255,6 +285,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				880D452B25184BC5003376B6 /* SystemConfiguration.framework in Frameworks */,
+				880D452A25184BB8003376B6 /* CoreTelephony.framework in Frameworks */,
 				DECAE197C7DD6B80B3382174 /* libPods-BlocBlinds.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,6 +303,23 @@
 				9840915C456CDCF7BD46C75A /* Pods-ConnectorDemo.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		880D44D325182B89003376B6 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				880D44D425182B89003376B6 /* SVRadialGradientLayer.m */,
+				880D44D525182B89003376B6 /* SVIndefiniteAnimatedView.h */,
+				880D44D625182B89003376B6 /* SVProgressHUD.h */,
+				880D44D725182B89003376B6 /* SVProgressAnimatedView.m */,
+				880D44D825182B89003376B6 /* SVProgressHUD-Prefix.pch */,
+				880D44D925182B89003376B6 /* SVRadialGradientLayer.h */,
+				880D44DA25182B89003376B6 /* SVProgressHUD.m */,
+				880D44DB25182B89003376B6 /* SVIndefiniteAnimatedView.m */,
+				880D44DC25182B89003376B6 /* SVProgressHUD.bundle */,
+				880D44DD25182B89003376B6 /* SVProgressAnimatedView.h */,
+			);
+			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
 		88641DA5250A26F60050FD18 /* section */ = {
@@ -297,8 +346,8 @@
 		88641DBF250B46480050FD18 /* common */ = {
 			isa = PBXGroup;
 			children = (
+				880D44D325182B89003376B6 /* SVProgressHUD */,
 				88641DD1250B610F0050FD18 /* Category */,
-				88641DCB250B5BB10050FD18 /* CustomAlertView */,
 				88641DC0250B465C0050FD18 /* CWLocation */,
 			);
 			path = common;
@@ -309,26 +358,21 @@
 			children = (
 				88641DC1250B465C0050FD18 /* WTGetLocation.h */,
 				88641DC3250B465C0050FD18 /* WTGetLocation.m */,
-				88641DC4250B465C0050FD18 /* CLGeocoder+custom.h */,
-				88641DC2250B465C0050FD18 /* CLGeocoder+custom.m */,
 			);
 			path = CWLocation;
-			sourceTree = "<group>";
-		};
-		88641DCB250B5BB10050FD18 /* CustomAlertView */ = {
-			isa = PBXGroup;
-			children = (
-				88641DCD250B5BB10050FD18 /* TYAlertView+Custom.h */,
-				88641DCC250B5BB10050FD18 /* TYAlertView+Custom.m */,
-			);
-			path = CustomAlertView;
 			sourceTree = "<group>";
 		};
 		88641DD1250B610F0050FD18 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				880D450F251833F6003376B6 /* UIImageView+Connector.h */,
+				880D450E251833F5003376B6 /* UIImageView+Connector.m */,
 				88641DD2250B61790050FD18 /* UIImage+Custom.h */,
 				88641DD3250B61790050FD18 /* UIImage+Custom.m */,
+				88641DCD250B5BB10050FD18 /* TYAlertView+Custom.h */,
+				88641DCC250B5BB10050FD18 /* TYAlertView+Custom.m */,
+				88641DC4250B465C0050FD18 /* CLGeocoder+custom.h */,
+				88641DC2250B465C0050FD18 /* CLGeocoder+custom.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -375,6 +419,8 @@
 		8895291425021ADE004E17DF /* util */ = {
 			isa = PBXGroup;
 			children = (
+				880D44FF25182BCE003376B6 /* HUDUtil.h */,
+				880D44FE25182BCD003376B6 /* HUDUtil.m */,
 				88641DBA250B2B670050FD18 /* Util.h */,
 				88641DB9250B2B670050FD18 /* Util.m */,
 				8895292C2505C9F5004E17DF /* CColor.h */,
@@ -407,7 +453,6 @@
 				889528DF25021472004E17DF /* SiriDemo */,
 				889528EB25021472004E17DF /* SiriDemoUI */,
 				88AD757124E66C7800E304F6 /* Products */,
-				88AD75B924E671AF00E304F6 /* BlocBlindsInfo.plist */,
 				07F9B0AE96D366EB183B3BBC /* Pods */,
 				C8F03C22EDC71FFAA9714993 /* Frameworks */,
 			);
@@ -444,6 +489,7 @@
 				88AD75C224E6784D00E304F6 /* BlocBlinds.storyboard */,
 				88AD758524E66C7B00E304F6 /* main.m */,
 				88AD758424E66C7B00E304F6 /* Info.plist */,
+				880D454E25184E26003376B6 /* BlocBlindsInfo.plist */,
 				88AD75A824E671A400E304F6 /* BlocBlinds.xcassets */,
 				88AD75C524E678F100E304F6 /* PrefixHeader.pch */,
 				88AD75E224EB661100E304F6 /* Localizable.strings */,
@@ -595,6 +641,7 @@
 				88AD75AB24E671AF00E304F6 /* Sources */,
 				88AD75AF24E671AF00E304F6 /* Frameworks */,
 				88AD75B024E671AF00E304F6 /* Resources */,
+				880D453925184C81003376B6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -686,6 +733,7 @@
 				88AD75DF24EB661100E304F6 /* Localizable.strings in Resources */,
 				8895291A25021B48004E17DF /* SiriAddVC.xib in Resources */,
 				88AD75C324E6784D00E304F6 /* BlocBlinds.storyboard in Resources */,
+				880D44E625182B89003376B6 /* SVProgressHUD.bundle in Resources */,
 				88AD758324E66C7B00E304F6 /* LaunchScreen.storyboard in Resources */,
 				88AD758024E66C7B00E304F6 /* Assets.xcassets in Resources */,
 				88AD757E24E66C7800E304F6 /* Main.storyboard in Resources */,
@@ -714,6 +762,7 @@
 				88AD75E024EB661100E304F6 /* Localizable.strings in Resources */,
 				8895291B25021B48004E17DF /* SiriAddVC.xib in Resources */,
 				88AD75C424E6784D00E304F6 /* BlocBlinds.storyboard in Resources */,
+				880D44E725182B89003376B6 /* SVProgressHUD.bundle in Resources */,
 				88AD75B124E671AF00E304F6 /* LaunchScreen.storyboard in Resources */,
 				88AD75B324E671AF00E304F6 /* Main.storyboard in Resources */,
 				88AD75B424E671AF00E304F6 /* BlocBlinds.xcassets in Resources */,
@@ -768,6 +817,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		880D453925184C81003376B6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlocBlinds/Pods-BlocBlinds-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlocBlinds/Pods-BlocBlinds-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BlocBlinds/Pods-BlocBlinds-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8881B907A2476FE1FCC370BA /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -812,19 +878,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				88AD757B24E66C7800E304F6 /* ViewController.m in Sources */,
+				880D44DE25182B89003376B6 /* SVRadialGradientLayer.m in Sources */,
+				880D4510251833F6003376B6 /* UIImageView+Connector.m in Sources */,
 				88641DB0250A27730050FD18 /* BaseVC.m in Sources */,
 				8895291825021B48004E17DF /* SiriAddVC.m in Sources */,
 				88641DC7250B465D0050FD18 /* WTGetLocation.m in Sources */,
+				880D44E425182B89003376B6 /* SVIndefiniteAnimatedView.m in Sources */,
 				88641DC5250B465D0050FD18 /* CLGeocoder+custom.m in Sources */,
 				88AD75BE24E6778600E304F6 /* main.m in Sources */,
 				88641DAA250A27600050FD18 /* WifiVC.m in Sources */,
 				88641DCE250B5BB10050FD18 /* TYAlertView+Custom.m in Sources */,
+				880D44E025182B89003376B6 /* SVProgressAnimatedView.m in Sources */,
 				88641DD4250B61790050FD18 /* UIImage+Custom.m in Sources */,
 				889388E8250EEE8F00104669 /* NetWorkVC.m in Sources */,
 				889529062502154D004E17DF /* Intents.intentdefinition in Sources */,
 				88641DB5250B15280050FD18 /* BaseInfoShowVC.m in Sources */,
 				8895292A2505B409004E17DF /* BaseTableVC.m in Sources */,
+				880D450025182BCE003376B6 /* HUDUtil.m in Sources */,
 				88641DBB250B2B670050FD18 /* Util.m in Sources */,
+				880D44E225182B89003376B6 /* SVProgressHUD.m in Sources */,
 				88641D93250715C40050FD18 /* ActivityAddVC.m in Sources */,
 				88AD757524E66C7800E304F6 /* AppDelegate.m in Sources */,
 			);
@@ -851,20 +923,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				88AD75AC24E671AF00E304F6 /* ViewController.m in Sources */,
+				880D44DF25182B89003376B6 /* SVRadialGradientLayer.m in Sources */,
+				880D4511251833F6003376B6 /* UIImageView+Connector.m in Sources */,
 				88641DB1250A27730050FD18 /* BaseVC.m in Sources */,
 				8895291925021B48004E17DF /* SiriAddVC.m in Sources */,
 				88641DC8250B465D0050FD18 /* WTGetLocation.m in Sources */,
+				880D44E525182B89003376B6 /* SVIndefiniteAnimatedView.m in Sources */,
 				88641DC6250B465D0050FD18 /* CLGeocoder+custom.m in Sources */,
 				88AD75BF24E6779F00E304F6 /* main.m in Sources */,
 				88E3A5C62515B863008983E6 /* GoogleMapVC.m in Sources */,
 				88641DAB250A27600050FD18 /* WifiVC.m in Sources */,
 				88641DCF250B5BB10050FD18 /* TYAlertView+Custom.m in Sources */,
+				880D44E125182B89003376B6 /* SVProgressAnimatedView.m in Sources */,
 				88641DD5250B61790050FD18 /* UIImage+Custom.m in Sources */,
 				889388E9250EEE8F00104669 /* NetWorkVC.m in Sources */,
 				889529072502154D004E17DF /* Intents.intentdefinition in Sources */,
 				88641DB6250B15280050FD18 /* BaseInfoShowVC.m in Sources */,
 				8895292B2505B409004E17DF /* BaseTableVC.m in Sources */,
+				880D450125182BCE003376B6 /* HUDUtil.m in Sources */,
 				88641DBC250B2B670050FD18 /* Util.m in Sources */,
+				880D44E325182B89003376B6 /* SVProgressHUD.m in Sources */,
 				88641D94250715C40050FD18 /* ActivityAddVC.m in Sources */,
 				88AD75AD24E671AF00E304F6 /* AppDelegate.m in Sources */,
 			);
@@ -1149,6 +1227,7 @@
 					"BlocBlinds=0",
 				);
 				INFOPLIST_FILE = ConnectorDemo/Info.plist;
+				INFOPLIST_PREPROCESS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1172,6 +1251,7 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ConnectorDemo/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "BlocBlinds=0";
 				INFOPLIST_FILE = ConnectorDemo/Info.plist;
+				INFOPLIST_PREPROCESS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1268,12 +1348,13 @@
 					"$(inherited)",
 					"BlocBlinds=1",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/BlocBlindsInfo.plist";
+				INFOPLIST_FILE = ConnectorDemo/BlocBlindsInfo.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dooya.inhouse.connectoreu;
+				PRODUCT_BUNDLE_IDENTIFIER = com.smarthome.app.connector;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1287,12 +1368,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ConnectorDemo/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "BlocBlinds=1";
-				INFOPLIST_FILE = "$(SRCROOT)/BlocBlindsInfo.plist";
+				INFOPLIST_FILE = ConnectorDemo/BlocBlindsInfo.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dooya.inhouse.connectoreu;
+				PRODUCT_BUNDLE_IDENTIFIER = com.smarthome.app.connector;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

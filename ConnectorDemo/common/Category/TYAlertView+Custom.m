@@ -10,6 +10,8 @@
 #import "UIImage+Custom.h"
 #import "UIView+TYAutoLayout.h"
 #import "UIView+TYAlertView.h"
+#import "UIImageView+Connector.h"
+
 
 #define kMaximumDismissTimeInterval  10
 #define kMinimumDismissTimeInterval  1.5
@@ -168,4 +170,97 @@ TYAlertView* hudAlertView = nil;
 }
 
 
++(void)showHudWithTitle:(NSString*) title
+                   type:(NSInteger) type //0 - 成功 1 - 失败 2 - 等待
+             completion:(TYAlertViewDismissCompletion) completion{
+    
+    if (hudAlertView) {
+        dismissBlock();
+        [self hideHudView];
+        [NSObject cancelPreviousPerformRequestsWithTarget:hudAlertView];
+    }
+    dismissBlock = completion;
+
+    hudAlertView = [self customAlertViewWithTitle:title
+                                          content:@"\n\n\n"];
+
+    if (type == 0) {
+        UIImageView* succesIV = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 26, 26)];
+        [succesIV setImage:[UIImage imageNamed:@"Tip_Success_Proc"]];
+        [hudAlertView addSubview:succesIV];
+        [succesIV mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.size.mas_equalTo(CGSizeMake(26, 26));
+            make.centerX.equalTo(hudAlertView);
+            make.top.equalTo(hudAlertView).with.offset(82);
+        }];
+    }else if (type == 1) {
+        UIImageView* failIV = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 26, 26)];
+        [failIV setImage:[UIImage imageNamed:@"Tip_Fail_Proc"]];
+        [hudAlertView addSubview:failIV];
+        [failIV mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.size.mas_equalTo(CGSizeMake(26, 26));
+            make.centerX.equalTo(hudAlertView);
+            make.top.equalTo(hudAlertView).with.offset(82);
+        }];
+    }else if (type == 2) {
+        UIImageView* waitIV = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 26, 26)];
+        [waitIV setImage:[UIImage imageNamed:@"Tip_Wait_For_Scene_Hud"]];
+        [waitIV beginCircleAnimation];
+        [hudAlertView addSubview:waitIV];
+        [waitIV mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.size.mas_equalTo(CGSizeMake(40, 40));
+            make.centerX.equalTo(hudAlertView);
+            make.top.equalTo(hudAlertView).with.offset(76);
+        }];
+    }
+    hudAlertView.titleLable.text = title;
+    [hudAlertView showInWindow];
+    if (type != 2) {
+        [hudAlertView performSelector:@selector(hideHudAlertView:) withObject:completion afterDelay:[self displayDurationForString:title]];
+    }
+}
+
++(void)showSuccessWithTitle:(NSString*)title
+                 completion:(TYAlertViewDismissCompletion) completion{
+    [self showHudWithTitle:title
+                      type:0
+                completion:^{
+                    completion();
+                }];
+}
+
++(void)showFailWithTitle:(NSString*)title
+              completion:(TYAlertViewDismissCompletion) completion{
+    [self showHudWithTitle:title
+                      type:1
+                completion:^{
+                    completion();
+                }];
+}
+
++(void)showWatingWithTitle:(NSString *)title{
+    [self showHudWithTitle:title
+                      type:2
+                completion:^{
+                    
+                }];
+}
+
+-(void)hideHudAlertView:(TYAlertViewDismissCompletion) completion{
+    completion();
+    [hudAlertView hideView];
+    hudAlertView = nil;
+}
+
++(void)hideHudView{
+    if (hudAlertView) {
+        [hudAlertView hideView];
+        hudAlertView = nil;
+    }
+}
+
++ (NSTimeInterval)displayDurationForString:(NSString*)string {
+    CGFloat minimum = MAX((CGFloat)string.length * 0.06 + 0.5, kMinimumDismissTimeInterval);
+    return MIN(minimum, kMaximumDismissTimeInterval);
+}
 @end

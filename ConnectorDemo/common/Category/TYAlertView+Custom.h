@@ -24,5 +24,15 @@ typedef void (^TYAlertViewDismissCompletion)(void);
                           rightBtnTitle:(NSString*)rightBtnTitle
                           rightBtnClick:(void(^)(TYAlertView* alertView))rightBtnClick;
 
++(void)showSuccessWithTitle:(NSString*)title
+                 completion:(TYAlertViewDismissCompletion) completion;
+
++(void)showFailWithTitle:(NSString*)title
+              completion:(TYAlertViewDismissCompletion) completion;
+
+
++(void)showWatingWithTitle:(NSString*)title;
+
++(void)hideHudView;
 
 @end

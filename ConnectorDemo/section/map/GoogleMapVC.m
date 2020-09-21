@@ -40,7 +40,9 @@
 
 -(void)refreshLocation{
     WS(weakSelf)
+    [HUDUtil showWating];
     [[WTGetLocation SharedInstance] startLocation:^(NSInteger errorValue, NSString *cityName, NSString *subCityName) {
+        [HUDUtil dismiss];
         if (errorValue == -2) {//不允许定位
             dispatch_async(dispatch_get_main_queue(), ^{
                 [Util showTipPopViewTitle:@"提醒"
@@ -58,14 +60,15 @@
                             }];
             });
         }else if(errorValue == 0){
-            [weakSelf initGoogleMap];
             self.location = [WTGetLocation SharedInstance] .curLocation;
+            [weakSelf initGoogleMap];
             [self refreshCrrentLocationInfo];
         }
     }];
 }
 
 -(void)initGoogleMap {
+    NSLog(@"%f-%f",self.location.coordinate.latitude,self.location.coordinate.longitude);
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:self.location.coordinate.latitude
                                                             longitude:self.location.coordinate.longitude
                                                                  zoom:3];

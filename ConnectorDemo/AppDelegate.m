@@ -9,7 +9,10 @@
 #import "AppDelegate.h"
 #import <Intents/Intents.h>
 #import "ConnectorDemoIntent.h"
-//#import <GoogleMaps/GoogleMaps.h>
+#if BlocBlinds
+//先去引入谷歌地图pod
+#import <GoogleMaps/GoogleMaps.h>
+#endif
 
 @interface AppDelegate ()
 
@@ -29,9 +32,10 @@
     // 隐藏返回图标的文字
     [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(-1000, 0) forBarMetrics:UIBarMetricsDefault];
 
+#if BlocBlinds
     //google地图
-//    [GMSServices provideAPIKey:@"my-API-KEY"];
-
+    [GMSServices provideAPIKey:@"AIzaSyAJ1imjw4IYry_h2jBD_gx5ZZ3AjpRxtFQ"];
+#endif
     
     return YES;
 }
